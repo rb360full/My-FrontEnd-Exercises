@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(135, 102, 193));
+}
+
+
+
+div {
+    margin-top: 200px;
+    height: 300px;
+    border-radius: 50px;
+    background-image: url(images/steve.png);
+    background-position: center center;
+
+    background-size: 30%;
+    background-position-x: left;
+
+}
+
+div p {
+    color: rgb(29, 29, 105);
+    font-size: 100px;
+    text-align: center;
+}
+
+h2,
+p {
+    color: white;
+    text-align: center;
+}
+
+
+h3 {
+box-sizing: border-box;
+    font-size: 50px;
+    color: rgb(29, 29, 105);
+    text-align: center;
+    border: 5px solid black;
+    width: 500px;
+    height: auto;
+padding: 20px;
+}

@@ -34,4 +34,15 @@ thead {
 
 .devtools {
   margin-top: 0px;
+  padding-top: 30px;
+  padding-left: 10px;
+  border-top-left-radius: 20px;
+  border-top: 5px solid #ff0000;
+  border-left: 20px solid #aa2266;
+
+}
+
+h4,h3,h1{
+  
+  color: blueviolet;
 }
