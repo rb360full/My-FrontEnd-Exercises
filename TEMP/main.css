@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+}
+body {
+    margin: 0px;
+    background-color: brown;
+  
+}
+
+
+
+.blur {
+    
+    background-color: aqua;
+    width: 50%;
+    height: 100vh;
+    
+    
+}
