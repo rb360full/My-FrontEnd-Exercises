@@ -1,19 +1,20 @@
-*{
-    margin: 0px;
+* {
+	margin: 0px;
 }
 body {
-    margin: 0px;
-    background-color: brown;
-  
+	background-image: url(image/25563.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	backdrop-filter: blur(100px) !important;
+	height: 100vh;
 }
 
+.background {
+	margin: 0 auto;
+	text-align: center;
+	border: solid 1px #fff;
 
-
-.blur {
-    
-    background-color: aqua;
-    width: 50%;
-    height: 100vh;
-    
-    
+	padding: 100px;
 }
