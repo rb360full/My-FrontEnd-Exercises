@@ -1,11 +1,17 @@
 body {
+	
 	background-color: lightgray;
+	
+}
+.miniProject1 {
+	margin-top: 100px;
 	font-family: sans-serif;
 }
+
 .container {
 	width: 50%;
 	background-color: white;
-	margin: 200px auto;
+	margin: 30px auto;
 	text-align: center;
 	border-radius: 20px;
 	padding-bottom: 20px;
@@ -24,12 +30,10 @@ body {
 	font-weight: bold;
 	color: #808080;
 	border-bottom: solid 15px #d5d1d2;
-	
 }
 .please {
 	font-size: 30px;
 	color: rgb(95, 95, 95);
-	
 }
 
 .socialbox {
