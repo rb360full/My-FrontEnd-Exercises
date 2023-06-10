@@ -1,10 +1,14 @@
+body {
+	background-color: lightgray;
+}
 .container {
 	width: 50%;
-	
-    margin: 200px auto;
+	background-color: white;
+	margin: 200px auto;
 	text-align: center;
-	border: solid 10px rgb(250,250,250);
 	border-radius: 30px;
+	/* border: #fff solid 1px; */
+	padding-bottom: 20px;
 }
 
 .mblogo {
@@ -18,7 +22,7 @@
 	font-size: 45px;
 	font-weight: bold;
 	color: #808080;
-	border-bottom: solid 15px #D5D1D2;
+	border-bottom: solid 15px #d5d1d2;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .please {
@@ -30,7 +34,7 @@
 .socialbox {
 	background-color: lightgray;
 	padding: 10px 150px;
-    margin: 40px auto;
+	margin: 40px auto;
 }
 .instalogo,
 .youlogo,
