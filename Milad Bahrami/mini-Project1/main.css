@@ -1,19 +1,20 @@
 body {
 	background-color: lightgray;
+	font-family: sans-serif;
 }
 .container {
 	width: 50%;
 	background-color: white;
 	margin: 200px auto;
 	text-align: center;
-	border-radius: 30px;
-	/* border: #fff solid 1px; */
+	border-radius: 20px;
 	padding-bottom: 20px;
+	box-shadow: 0 0 10px #808080;
 }
 
 .mblogo {
 	border-radius: 50%;
-	border: dotted 3px black;
+	border: dotted 3px gray;
 	margin-top: 40px;
 }
 .mbName {
@@ -23,12 +24,12 @@ body {
 	font-weight: bold;
 	color: #808080;
 	border-bottom: solid 15px #d5d1d2;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	
 }
 .please {
 	font-size: 30px;
 	color: rgb(95, 95, 95);
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	
 }
 
 .socialbox {
@@ -41,6 +42,7 @@ body {
 .facelogo {
 	width: 80px;
 	border-radius: 50%;
+	margin: 20px;
 }
 
 a {
