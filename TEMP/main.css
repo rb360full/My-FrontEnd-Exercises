@@ -1,20 +1,36 @@
-* {
-	margin: 0px;
-}
-body {
-	background-image: url(image/25563.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	backdrop-filter: blur(100px) !important;
-	height: 100vh;
+
+.shadow {
+	width: 500px;
+	height: 500px;
+	border: solid	3 px #ccc;
+	background-color: gray;
+	margin: 100px;
+	box-shadow: 10px 10px;
+	direction: rtl;
 }
 
-.background {
-	margin: 0 auto;
-	text-align: center;
-	border: solid 1px #fff;
+.child1{
+	display: inline-block;
+	height: 30%;
+	width: 30%;
+	background-color: red;
+}
 
-	padding: 100px;
+.child2{
+	display: inline-block;
+	height: 30%;
+	width: 30%;
+	background-color: green;
+}
+
+.child3{
+	display: inline-block;
+	height: 30%;
+	width: 30%;
+	background-color: blue;
+}
+
+p{
+	display: inline-block;
+	text-align: left;
 }
