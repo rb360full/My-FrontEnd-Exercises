@@ -1,36 +1,29 @@
-
-.shadow {
-	width: 500px;
-	height: 500px;
-	border: solid	3 px #ccc;
-	background-color: gray;
-	margin: 100px;
-	box-shadow: 10px 10px;
-	direction: rtl;
+* {
+	margin: 0px;
+	padding: 0px;
 }
 
-.child1{
-	display: inline-block;
-	height: 30%;
-	width: 30%;
-	background-color: red;
+i {
+	border-right: solid 1px blue;
+	user-select: none;
+}
+span {
+	border-left: solid 1px #000;
+	padding: 0px 100px;
+	width: 5px;
+	user-select: none;
 }
 
-.child2{
+.b1 {
 	display: inline-block;
-	height: 30%;
-	width: 30%;
-	background-color: green;
+	margin: 20px;
+	border: solid 1px #000;
 }
 
-.child3{
-	display: inline-block;
-	height: 30%;
-	width: 30%;
-	background-color: blue;
+span:hover{
+	background-color: yellow;
+	cursor: default;
 }
-
-p{
-	display: inline-block;
-	text-align: left;
+span:active{
+	background-color: blueviolet;
 }
