@@ -20,10 +20,14 @@ span {
 	border: solid 1px #000;
 }
 
-span:hover{
+span:hover {
 	background-color: yellow;
 	cursor: default;
 }
-span:active{
+span:active {
 	background-color: blueviolet;
+}
+.p:hover i{
+background-color: red;
+	
 }
