@@ -1,0 +1,36 @@
+body{
+    margin: 0px;
+}
+table {
+	width: 300px;
+	border-collapse: collapse;
+	text-align: center;
+    user-select: none;
+}
+
+table td,
+th {
+	border: solid 1px #000;
+	/* width: 100px; */
+    
+}
+
+th {
+	background-color: greenyellow;
+    backj;;
+}
+
+tr:nth-child(1-2) {
+	background-color: #e2e2e2;
+}
+td:hover{
+    background-color: lightgoldenrodyellow;
+
+}
+p{
+    /* backface-visibility: hidden; */
+    content-visibility: hidden;
+    font-size: 10vh;
+    padding: 0px;
+    margin: 0px;
+}
