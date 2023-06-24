@@ -1,36 +1,16 @@
-body{
-    margin: 0px;
-}
-table {
-	width: 300px;
-	border-collapse: collapse;
-	text-align: center;
-    user-select: none;
-}
-
-table td,
-th {
-	border: solid 1px #000;
-	/* width: 100px; */
-    
+div.div1 {
+	vertical-align: top;
+	margin: 0px;
+	display: inline-block;
+	width: 200px;
+	height: 300px;
+	background-color: blue;
 }
 
-th {
-	background-color: greenyellow;
-    
-}
-
-tr:nth-child(1-2) {
-	background-color: #e2e2e2;
-}
-td:hover{
-    background-color: lightgoldenrodyellow;
-
-}
-p{
-    /* backface-visibility: hidden; */
-    content-visibility: hidden;
-    font-size: 10vh;
-    padding: 0px;
-    margin: 0px;
+div.div2 {
+	margin: 0px;
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background-color: rgb(255, 0, 191);
 }
