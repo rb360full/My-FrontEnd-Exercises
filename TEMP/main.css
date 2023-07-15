@@ -1,17 +1,67 @@
 .container {
-	height: 500px;
-	width: 700px;
-	background-image: url(image/25563.jpg);
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
+	width: 800px;
+	height: 2000px;
+	margin: 100px auto;
 }
-
-.inside {
+.container1,
+.container2 {
+	position: relative;
+	width: 600px;
+	height: 600px;
+	margin: 20px auto;
+}
+.c1-top {
+	width: 600px;
+}
+.c1-top-left {
 	width: 200px;
 	height: 200px;
-	background-color: rgba(198, 211, 227, 0.1);
-	backdrop-filter: blur(20px);
-	border-radius: 50%;
+	background: linear-gradient(135deg, transparent 50%, #c801da 50%);
+	position: absolute;
+}
+.c1-top-right {
+	width: 400px;
+	height: 200px;
+	background-color: #c801da;
+	position: absolute;
+	left: 200px;
+}
+.c1-down {
+	width: 600px;
+	height: 400px;
+	background-color: #c801da;
+	position: absolute;
+	top: 200px;
+}
+
+/* باکس پایینی */
+
+.c2-top {
+	width: 600px;
+}
+.c2-top-left {
+	box-sizing: border-box;
+	width: 200px;
+	height: 200px;
+	background: linear-gradient(135deg, transparent 50%, #1c29b7 50%, transparent 52%, white 52%);
+	position: absolute;
+}
+.c2-top-right {
+	box-sizing: border-box;
+	width: 400px;
+	height: 200px;
+	border-top: solid 4px #1c29b7;
+	border-right: solid 4px #1c29b7;
+	position: absolute;
+	left: 200px;
+}
+.c2-down {
+	box-sizing: border-box;
+	width: 600px;
+	height: 400px;
+	border-bottom: solid 4px #1c29b7;
+	border-left: solid 4px #1c29b7;
+	border-right: solid 4px #1c29b7;
+	position: absolute;
+	top: 200px;
 }
