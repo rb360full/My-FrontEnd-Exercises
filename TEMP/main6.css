@@ -1,21 +1,6 @@
 .box1 {
-	width: 500px;
-	height: 500px;
-    
-	background-color: rgb(109, 109, 25);
-    position: relative;
-    margin: 200px auto;
-    overflow: hidden;
-    
-}
-
-.box2 {
-	background-color: aqua;
-	width: 100px;
-	height: 100px;
-    position: relative;
-    top: -10%;
-    left: 10%;
-    
-    
+  width: 200px;
+  height: 200px;
+  border: solid;
+  overflow: ;
 }
