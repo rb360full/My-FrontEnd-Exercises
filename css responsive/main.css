@@ -1,0 +1,59 @@
+body , *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 100%;
+    text-align: center;
+}
+
+
+.box1 , .box2 , .box3{
+    display: inline-block;
+    width: 100%;
+    background-color: brown;
+    border: solid 3px blue;
+    box-sizing: border-box;
+    height: 5em;
+}
+
+@media screen and  (min-width: 768px) {
+    .box1 , .box2 , .box3{
+        width: 32%;
+    }
+    
+}
+
+
+ul {
+
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: none;
+    
+}
+
+li {
+    display: inline-block;
+    padding: 10px;
+    border: solid;
+    width: 32%;
+    text-align: center;
+
+}
+
+@media (max-width:768px) {
+    ul{
+        display: block;
+    }
+    li {
+        display: block;
+        width: 100%;
+    }
+
+}

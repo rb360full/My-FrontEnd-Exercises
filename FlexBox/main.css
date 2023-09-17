@@ -1,0 +1,26 @@
+.box{
+    width: 800px;
+    height: 300px;
+    border: dashed 2px green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+
+.left{
+background-color: red;
+
+    height: 50%;
+}
+
+.right{
+    background-color: blue;
+    height: 80%;
+    width: 20%;
+    border: solid;
+
+}
+
