@@ -1,0 +1,17 @@
+.container{
+
+}
+
+.div1{
+    background-image: url(image/25563.jpg);
+    height: 100vh;
+    /* backdrop-filter: blur(10px); */
+    /* filter: blur(10px); */
+}
+
+p{
+    backdrop-filter: blur(3px);
+    height: 100%;
+    font-size: 50px;
+    margin: 0px auto;
+}
