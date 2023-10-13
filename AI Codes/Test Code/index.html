@@ -3,44 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="bootstrap.css">
+  <title>Bootstrap Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-  
-  <div class="list-group">
-    <label class="list-group-item">
-      <input type="radio" name="options" id="option1" autocomplete="off">
-      Item 1
-    </label>
-    <label class="list-group-item">
-      <input type="radio" name="options" id="option2" autocomplete="off">
-      Item 2
-    </label>
-    <label class="list-group-item">
-      <input type="radio" name="options" id="option3" autocomplete="off">
-      Item 3
-    </label>
-  </div>
-  
-  <script>
-    $('.list-group-item').on('click', function() {
-      $(this).addClass('active').siblings().removeClass('active');
-      $(this).find('input[type="radio"]').prop('checked', true);
-    });
-  </script>
-  
-  <style>
-    .list-group-item.active {
-      background-color: #007bff;
-      border-color: #007bff;
-    }
-    .list-group-item.active input[type="radio"] {
-      color: #fff;
-    }
-  </style>
-  
+  <!-- Your content goes here -->
 
-<script src="cdn.jsdelivr.net_npm_bootstrap@5.3.2_dist_js_bootstrap.bundle.min.js"></script>
+  <div class="container">
+    <h1>Build Fast, Responsive Sites with Bootstrap</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, tortor eget lacinia consectetur, nisi nunc tincidunt nunc, ac tincidunt nisl nunc id nunc. Sed euismod, tortor eget lacinia consectetur, nisi nunc tincidunt nunc, ac tincidunt nisl nunc id nunc.</p>
+    <button class="btn btn-primary">Learn More</button>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 </body>
 </html>
