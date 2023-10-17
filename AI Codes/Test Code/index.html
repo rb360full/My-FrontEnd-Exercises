@@ -1,22 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Page</title>
+  <title>v2ray Config Tester</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #result {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <!-- Your content goes here -->
-
   <div class="container">
-    <h1>Build Fast, Responsive Sites with Bootstrap</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, tortor eget lacinia consectetur, nisi nunc tincidunt nunc, ac tincidunt nisl nunc id nunc. Sed euismod, tortor eget lacinia consectetur, nisi nunc tincidunt nunc, ac tincidunt nisl nunc id nunc.</p>
-    <button class="btn btn-primary">Learn More</button>
+    <h1>v2ray Config Tester</h1>
+    <form id="configForm">
+      <div class="form-group">
+        <label for="v2rayConfigs">v2ray Configs:</label>
+        <textarea class="form-control" id="v2rayConfigs" placeholder="Enter v2ray configs" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Test Configuration</button>
+    </form>
+    <div id="result"></div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+
+  <script>
+    document.getElementById('configForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var v2rayConfigs = document.getElementById('v2rayConfigs').value;
+
+      // Call API to test v2ray configurations
+      var apiUrl = 'https://your-api-endpoint.com/test-v2ray-configs';
+      var data = {
+        v2rayConfigs: v2rayConfigs
+      };
+
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Display test result
+        var resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = 'Configuration Test Result: ' + data.result;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
 </body>
 </html>
