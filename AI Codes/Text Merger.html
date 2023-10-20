@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text File Merger</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .btn-primary {
+      width: 100%;
+    }
+
+    #mergedFile {
+      margin-top: 30px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Text File Merger</h1>
+
+    <form>
+      <div class="form-group">
+        <label for="fileInput">Select Text Files:</label>
+        <input type="file" id="fileInput" class="form-control-file" multiple>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="mergeFiles()">Merge Files</button>
+    </form>
+
+    <div id="mergedFile"></div>
+  </div>
+
+  <script>
+    function mergeFiles() {
+      var fileInput = document.getElementById('fileInput');
+      var files = fileInput.files;
+      var mergedText = '';
+      var counter = 0;
+
+      function readFile(file) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+          mergedText += e.target.result;
+          counter++;
+
+          // Check if all files have been read
+          if (counter === files.length) {
+            downloadMergedFile(mergedText);
+          }
+        };
+
+        reader.readAsText(file);
+      }
+
+      for (var i = 0; i < files.length; i++) {
+        readFile(files[i]);
+      }
+    }
+    
+    function downloadMergedFile(text) {
+      var mergedFileDiv = document.getElementById('mergedFile');
+      mergedFileDiv.textContent = '';
+
+      var mergedFile = document.createElement('a');
+      mergedFile.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(text);
+      mergedFile.download = 'merged_file.txt';
+      mergedFile.textContent = 'Download Merged File';
+      mergedFile.classList.add('btn', 'btn-success');
+
+      mergedFileDiv.appendChild(mergedFile);
+    }
+  </script>
+</body>
+</html>
