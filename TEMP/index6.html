@@ -1,17 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shapes</title>
-    <link rel="stylesheet" href="main6.css">
+    <title>All Three Codes</title>
+    <style>
+        /* CSS Code */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: auto;
+        }
+
+        .box {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="box">
+            <!-- HTML Code -->
+            <h1>Hello, World!</h1>
+            <p>This is a simple HTML document.</p>
+        </div>
 
-    <div class="box1">
+        <div class="box">
+            <!-- JavaScript Code -->
+            <script>
+                function showAlert() {
+                    alert("Hello, World!");
+                }
 
-        <p>ghdadgjasgdahsgdhasgdhsag klja lasd lkjd lkjsd lkjasd lkjsda lksjd lksdaj lksdaj lsdakj dsalkj dsalkj dslkj dlkj dlk dlkj lkj </p>
-    </div>
-    
-</body>
-</html>
+                document.write("<button onclick='showAlert()'>Click me</button>");
+            </script>
+        </div>
+
+        <div class="box">
+            <!-- Image Conversion Code -->
+            <script>
+                function convertToPng() {
+                    var img = document.getElementById("myImage");
+                    var canvas = document.createElement("canvas");
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    var ctx = canvas.getContext("2d");
+                    ctx.drawImage(img, 0, 0);
+                    var dataURL = canvas.toDataURL("image/png");
+                    var pngImg = document.createElement("img");
+                    pngImg.src = dataURL;
+                    document.body.appendChild(pngImg);
+                }
+            </script>
+
+            <img id="myImage" src="https://via.placeholder.com/150" alt="Placeholder Image">
+            <button onclick="convertToPng()">Convert to PNG</button>
+        </div>
