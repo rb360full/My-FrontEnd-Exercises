@@ -3,17 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>V2Ray Config Tester</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Search App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    .search-history {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>V2Ray Config Tester</h1>
-    <textarea id="configInput" placeholder="Paste your V2Ray config here"></textarea>
-    <button id="testBtn">Test Config</button>
-    <div id="result"></div>
+    <form>
+      <div class="form-group">
+        <label for="search">Search:</label>
+        <input type="text" class="form-control" id="search">
+      </div>
+      <button type="submit" class="btn btn-primary" id="search-btn">Search</button>
+    </form>
+    <div class="search-history">
+      <h3>Last 5 Searches:</h3>
+      <ul id="search-list"></ul>
+    </div>
   </div>
 
-  <script src="js/script.js"></script>
+  <script>
+    const searchInput = document.getElementById('search');
+    const searchBtn = document.getElementById('search-btn');
+    const searchList = document.getElementById('search-list');
+    let searchHistory = [];
+
+    // Retrieve search history from local storage
+    if (localStorage.getItem('searchHistory')) {
+      searchHistory = JSON.parse(localStorage.getItem('searchHistory'));
+      updateSearchHistory();
+    }
+
+    searchBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      const searchQuery = searchInput.value;
+      // Make API request and display search results
+      // Store search query in array and local storage
+      searchHistory.push(searchQuery);
+      updateSearchHistory();
+      localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+    });
+
+    function updateSearchHistory() {
+      searchList.innerHTML = '';
+      const lastFiveSearches = searchHistory.slice(-5);
+      lastFiveSearches.forEach(query => {
+        const li = document.createElement('li');
+        li.textContent = query;
+        searchList.appendChild(li);
+      });
+    }
+
+    searchInput.addEventListener('input', () => {
+      updateSearchHistory();
+    });
+  </script>
 </body>
 </html>
