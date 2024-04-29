@@ -1,0 +1,52 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body{
+  padding: 2rem;
+  text-align: justify;
+}
+details {
+  padding: 2rem;
+  position: relative;
+}
+
+details summary {
+  list-style-type: none;
+  overflow: hidden;
+  /* position: relative; */
+
+}
+
+details summary::marker {
+  display: none !important;
+}
+
+details summary::before {
+
+  content: "click to open";
+  color: red;
+  padding-right: 5px;
+  font-size: 20px;
+  position: absolute;
+  right: 2%;
+  top: 100%;
+}
+
+details[open] summary::before {
+  content: "clik to close";
+}
+details[open] summary::after {
+  background: linear-gradient(transparent, transparent);
+}
+
+.fade-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(transparent 10%, rgba(255,255,255,1));
+  pointer-events: none;
+}

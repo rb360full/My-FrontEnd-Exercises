@@ -1,10 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from "react";
 
 function App() {
-  let index = 0;
-  index++
-  console.log(index);
+  useEffect(() => {
+
+    let index = 0;
+    setInterval(() => {
+      console.log(index);
+      index++
+    }, 2000);
+  },[])
   return (
     <div className="App">
       <header className="App-header">
