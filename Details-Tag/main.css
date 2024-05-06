@@ -34,7 +34,7 @@ details summary::before {
 }
 
 details[open] summary::before {
-  content: "clik to close";
+  content: "click to close";
 }
 details[open] summary::after {
   background: linear-gradient(transparent, transparent);
